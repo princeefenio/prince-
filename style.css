@@ -1,0 +1,714 @@
+/* =============================================
+   VARIABILI — modifica qui i colori del sito
+   Cambiarle qui le cambia su TUTTE le pagine
+   ============================================= */
+:root {
+  --colore-sfondo:     #ffffff;
+  --colore-testo:      #1a1a1a;
+  --colore-testo-muto: #666666;
+  --colore-accento:    #2563eb;   /* ✏️ cambia questo colore con il tuo preferito */
+  --colore-bordo:      #e5e5e5;
+  --colore-card:       #f8f8f8;
+
+  --font-titoli: 'IBM Plex Mono', monospace;
+  --font-testo:  'IBM Plex Sans', sans-serif;
+
+  --larghezza-max: 760px;
+  --raggio:        8px;
+}
+
+/* =============================================
+   RESET E BASE
+   ============================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--colore-sfondo);
+  color: var(--colore-testo);
+  font-family: var(--font-testo);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =============================================
+   NAVIGAZIONE
+   ============================================= */
+nav {
+  position: sticky;
+  top: 0;
+  background-color: var(--colore-sfondo);
+  border-bottom: 1px solid var(--colore-bordo);
+  z-index: 100;
+  padding: 0 32px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  max-width: var(--larghezza-max);
+  margin: 0 auto;
+  padding: 16px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--colore-testo-muto);
+  font-size: 13px;
+  font-family: var(--font-titoli);
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+nav a:hover,
+nav a.attivo {
+  color: var(--colore-accento);
+}
+
+/* =============================================
+   LAYOUT PRINCIPALE
+   ============================================= */
+main {
+  max-width: var(--larghezza-max);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+section {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--colore-bordo);
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+/* =============================================
+   TIPOGRAFIA
+   ============================================= */
+.etichetta {
+  font-family: var(--font-titoli);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--colore-accento);
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-family: var(--font-titoli);
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+/* h1 nella pagina stage è leggermente più piccolo */
+.pagina-stage h1 {
+  font-size: clamp(24px, 4vw, 36px);
+}
+
+h2 {
+  font-family: var(--font-titoli);
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+h3 {
+  font-family: var(--font-titoli);
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+p {
+  color: var(--colore-testo-muto);
+  max-width: 600px;
+}
+
+a {
+  color: var(--colore-accento);
+}
+
+/* =============================================
+   SEZIONE HERO (intestazione — solo index)
+   ============================================= */
+#hero {
+  padding: 100px 0 80px;
+}
+
+#hero .sottotitolo {
+  font-size: 18px;
+  color: var(--colore-testo-muto);
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.tag {
+  font-family: var(--font-titoli);
+  font-size: 12px;
+  padding: 4px 12px;
+  border: 1px solid var(--colore-bordo);
+  border-radius: 100px;
+  color: var(--colore-testo-muto);
+}
+
+/* =============================================
+   SEZIONE CHI SONO — griglia 2 colonne
+   ============================================= */
+.griglia-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 32px;
+}
+
+.info-riga {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--colore-bordo);
+}
+
+.info-riga span:first-child {
+  font-family: var(--font-titoli);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--colore-testo-muto);
+}
+
+.info-riga span:last-child {
+  font-size: 15px;
+  color: var(--colore-testo);
+}
+
+/* =============================================
+   SEZIONE COMPETENZE
+   ============================================= */
+.competenze-griglia {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.competenza-card {
+  background: var(--colore-card);
+  border: 1px solid var(--colore-bordo);
+  border-radius: var(--raggio);
+  padding: 20px;
+}
+
+.competenza-card h3 {
+  font-size: 13px;
+  margin-bottom: 12px;
+  color: var(--colore-testo);
+}
+
+.barra-contenitore {
+  background: var(--colore-bordo);
+  border-radius: 4px;
+  height: 4px;
+  overflow: hidden;
+}
+
+.barra {
+  height: 100%;
+  background: var(--colore-accento);
+  border-radius: 4px;
+}
+
+.livello-label {
+  font-family: var(--font-titoli);
+  font-size: 10px;
+  color: var(--colore-testo-muto);
+  margin-top: 6px;
+}
+
+/* =============================================
+   SEZIONE PROGETTI
+   ============================================= */
+.progetti-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.progetto-card {
+  border: 1px solid var(--colore-bordo);
+  border-radius: var(--raggio);
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.progetto-card:hover {
+  border-color: var(--colore-accento);
+}
+
+.progetto-immagine {
+  width: 100%;
+  height: 180px;
+  background: var(--colore-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-titoli);
+  font-size: 12px;
+  color: var(--colore-testo-muto);
+  /* ✏️ puoi sostituire il colore di sfondo con un'immagine:
+     background: url('immagine-progetto.jpg') center/cover; */
+}
+
+.progetto-corpo {
+  padding: 24px;
+}
+
+.progetto-meta {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-family: var(--font-titoli);
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 4px;
+  background: var(--colore-card);
+  border: 1px solid var(--colore-bordo);
+  color: var(--colore-testo-muto);
+}
+
+.progetto-link {
+  display: inline-block;
+  margin-top: 16px;
+  font-family: var(--font-titoli);
+  font-size: 12px;
+  color: var(--colore-accento);
+  text-decoration: none;
+}
+
+.progetto-link:hover {
+  text-decoration: underline;
+}
+
+/* =============================================
+   SEZIONE PERCORSO — timeline
+   ============================================= */
+.timeline {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 24px;
+  padding-bottom: 32px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 91px;
+  top: 6px;
+  bottom: 0;
+  width: 1px;
+  background: var(--colore-bordo);
+}
+
+.timeline-item:last-child::before {
+  display: none;
+}
+
+.timeline-anno {
+  font-family: var(--font-titoli);
+  font-size: 12px;
+  color: var(--colore-testo-muto);
+  padding-top: 2px;
+  text-align: right;
+}
+
+.timeline-contenuto {
+  padding-left: 20px;
+  position: relative;
+}
+
+.timeline-contenuto::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--colore-accento);
+}
+
+/* =============================================
+   SEZIONE CONTATTI
+   ============================================= */
+.contatti-lista {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contatto-riga {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border: 1px solid var(--colore-bordo);
+  border-radius: var(--raggio);
+  text-decoration: none;
+  color: var(--colore-testo);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.contatto-riga:hover {
+  border-color: var(--colore-accento);
+  background: var(--colore-card);
+}
+
+.contatto-icona {
+  font-family: var(--font-titoli);
+  font-size: 12px;
+  color: var(--colore-accento);
+  min-width: 80px;
+}
+
+/* =============================================
+   SEZIONE CV
+   ============================================= */
+.cv-download-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--colore-card);
+  border: 1px solid var(--colore-bordo);
+  border-radius: var(--raggio);
+  padding: 16px 24px;
+  margin-top: 32px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cv-download-bar p {
+  font-size: 14px;
+  max-width: none;
+}
+
+.btn-scarica {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--colore-accento);
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-titoli);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  padding: 10px 20px;
+  border-radius: var(--raggio);
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.btn-scarica:hover {
+  opacity: 0.85;
+  color: #fff;
+}
+
+.cv-blocco {
+  margin-bottom: 40px;
+}
+
+.cv-blocco-titolo {
+  font-family: var(--font-titoli);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--colore-accento);
+  border-bottom: 1px solid var(--colore-bordo);
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+.cv-riga {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 16px 24px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--colore-bordo);
+  align-items: start;
+}
+
+.cv-riga:last-child {
+  border-bottom: none;
+}
+
+.cv-periodo {
+  font-family: var(--font-titoli);
+  font-size: 11px;
+  color: var(--colore-testo-muto);
+  padding-top: 3px;
+}
+
+.cv-contenuto h3 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 2px;
+  color: var(--colore-testo);
+}
+
+.cv-contenuto .cv-luogo {
+  font-size: 13px;
+  color: var(--colore-accento);
+  font-family: var(--font-titoli);
+  margin-bottom: 4px;
+}
+
+.cv-contenuto p {
+  font-size: 13px;
+  color: var(--colore-testo-muto);
+  max-width: none;
+  margin: 0;
+}
+
+.cv-skill-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 0;
+}
+
+.cv-skill {
+  font-family: var(--font-titoli);
+  font-size: 11px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background: var(--colore-card);
+  border: 1px solid var(--colore-bordo);
+  color: var(--colore-testo);
+}
+
+/* =============================================
+   PAGINA STAGE — componenti specifici
+   ============================================= */
+
+/* Intestazione pagina stage */
+#intro {
+  padding: 80px 0 60px;
+}
+
+#intro p {
+  margin-top: 12px;
+  max-width: 520px;
+}
+
+/* Numerazione stage (cerchio colorato) */
+.numero-stage {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--colore-accento);
+  color: #fff;
+  font-family: var(--font-titoli);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+/* Scheda azienda */
+.scheda-azienda {
+  border: 1px solid var(--colore-bordo);
+  border-radius: var(--raggio);
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.scheda-header {
+  background: var(--colore-card);
+  border-bottom: 1px solid var(--colore-bordo);
+  padding: 20px 24px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.scheda-header h2 {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.scheda-header .settore-badge {
+  font-family: var(--font-titoli);
+  font-size: 11px;
+  padding: 4px 12px;
+  border: 1px solid var(--colore-bordo);
+  border-radius: 100px;
+  color: var(--colore-testo-muto);
+  background: var(--colore-sfondo);
+  white-space: nowrap;
+}
+
+.scheda-corpo {
+  padding: 0;
+}
+
+.scheda-riga {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  border-bottom: 1px solid var(--colore-bordo);
+}
+
+.scheda-riga:last-child {
+  border-bottom: none;
+}
+
+.scheda-label {
+  font-family: var(--font-titoli);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--colore-testo-muto);
+  padding: 16px 24px;
+  background: var(--colore-card);
+  border-right: 1px solid var(--colore-bordo);
+  display: flex;
+  align-items: flex-start;
+}
+
+.scheda-valore {
+  padding: 14px 24px;
+  font-size: 15px;
+  color: var(--colore-testo);
+}
+
+/* Lista attività dentro la scheda */
+.attivita-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 24px;
+}
+
+.attivita-lista li {
+  font-size: 15px;
+  color: var(--colore-testo);
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.attivita-lista li::before {
+  content: '—';
+  color: var(--colore-accento);
+  font-family: var(--font-titoli);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Relazione */
+.relazione-contenitore {
+  margin-top: 8px;
+}
+
+.relazione-contenitore h3 {
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--colore-testo-muto);
+  margin-bottom: 16px;
+}
+
+.relazione-testo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.relazione-paragrafo {
+  border-left: 3px solid var(--colore-bordo);
+  padding-left: 20px;
+}
+
+.relazione-paragrafo .para-titolo {
+  font-family: var(--font-titoli);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--colore-accento);
+  margin-bottom: 6px;
+}
+
+.relazione-paragrafo p {
+  font-size: 15px;
+  line-height: 1.75;
+  /* ✏️ il testo della relazione va qui */
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+footer {
+  border-top: 1px solid var(--colore-bordo);
+  padding: 32px;
+  text-align: center;
+  font-family: var(--font-titoli);
+  font-size: 12px;
+  color: var(--colore-testo-muto);
+}
+
+/* =============================================
+   RESPONSIVE (schermi piccoli)
+   ============================================= */
+@media (max-width: 600px) {
+  main  { padding: 0 20px; }
+  nav   { padding: 0 20px; }
+
+  /* index */
+  .griglia-2col      { grid-template-columns: 1fr; }
+  .timeline-item     { grid-template-columns: 70px 1fr; }
+  .cv-riga           { grid-template-columns: 1fr; gap: 4px; }
+  .cv-periodo        { padding-top: 0; }
+  .cv-download-bar   { flex-direction: column; align-items: flex-start; }
+
+  /* stage */
+  .scheda-riga       { grid-template-columns: 1fr; }
+  .scheda-label      { border-right: none; border-bottom: 1px solid var(--colore-bordo); }
+  .scheda-header     { flex-direction: column; gap: 8px; }
+}
