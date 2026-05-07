@@ -4,8 +4,8 @@
    ============================================= */
 :root {
   --colore-sfondo:     #000000;
-  --colore-testo:      #1a1a1a;
-  --colore-testo-muto: #666666;
+  --colore-testo:      #ffffff;
+  --colore-testo-muto: #ffffff;
   --colore-accento:    #2563eb;   /* ✏️ cambia questo colore con il tuo preferito */
   --colore-bordo:      #e5e5e5;
   --colore-card:       #f8f8f8;
