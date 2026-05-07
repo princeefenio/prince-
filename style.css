@@ -224,7 +224,7 @@ a {
 }
 
 .barra-contenitore {
-  background: var(--colore-bordo);
+  background: var(--colore-testo);
   border-radius: 4px;
   height: 4px;
   overflow: hidden;
