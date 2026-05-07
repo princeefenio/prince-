@@ -6,9 +6,9 @@
   --colore-sfondo:     #000000;
   --colore-testo:      #ffffff;
   --colore-testo-muto: #ffffff;
-  --colore-accento:    #2563eb;   /* ✏️ cambia questo colore con il tuo preferito */
-  --colore-bordo:      #e5e5e5;
-  --colore-card:       #f8f8f8;
+  --colore-accento:    #00ffe1;   /* ✏️ cambia questo colore con il tuo preferito */
+  --colore-bordo:      #ff0000;
+  --colore-card:       #10ffd7;
 
   --font-titoli: 'IBM Plex Mono', monospace;
   --font-testo:  'IBM Plex Sans', sans-serif;
