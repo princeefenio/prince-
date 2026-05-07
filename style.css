@@ -3,7 +3,7 @@
    Cambiarle qui le cambia su TUTTE le pagine
    ============================================= */
 :root {
-  --colore-sfondo:     #ffffff;
+  --colore-sfondo:     #000000;
   --colore-testo:      #1a1a1a;
   --colore-testo-muto: #666666;
   --colore-accento:    #2563eb;   /* ✏️ cambia questo colore con il tuo preferito */
